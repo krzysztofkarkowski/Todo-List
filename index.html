@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Webstore To-Do List</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+<div class="todo_list">
+    <div class="todo__container">
+        <div class="todo__header">
+            <div class="header__name">Tasks List</div>
+        </div>
+        <div class="todo__tasks">
+            <ul class="todo__content" id="todo_content">
+                <template id="task_template">
+                    <li class="todo__li" data-date="${date}">
+                        <label for="todo${i}" class="todo__label">
+                            <input type="checkbox"  id="todo${i}" class="js__button todo__li-accept" ${status}>
+                            <span class="todo__li-text">${value}</span>
+                        </label>
+                        <div class="js__button todo__li-remove">&#10006;</div>
+                    </li>
+                </template>
+            </ul>
+        </div>
+        <form class="header__panel panel" id="todo_submit">
+            <input class="panel__text_input" id="todo_input" type="text" placeholder="Enter the task">
+            <input class="panel__submit"  type="submit" value="+">
+        </form>
+    </div>
+</div>
+</body>
+</html>
+
+
